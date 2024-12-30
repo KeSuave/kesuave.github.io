@@ -39,7 +39,7 @@ Esto generara los siguientes archivos:
 
 - `src/context.ts` - Contine tu configuración de contexto para tu juego.
 - `src/scenes/index.ts` - Contine el gestor de escenas para tu juego.
-- `src/scenes/boot.ts` - Contiene la escena de inicio donde puedes cargar los activos.
+- `src/scenes/boot.ts` - Contiene la escena de inicio donde puedes cargar imagenes o cualquier recurso necesario.
 - `src/scenes/menu.ts` - Contiene una escena de menú simple para empezar rápidamente.
 - `src/scenes/game.ts` - Contiene la lógica principal de juego de tu juego.
 - `src/scenes/gameOver.ts` - Contiene la pantalla de game over.
