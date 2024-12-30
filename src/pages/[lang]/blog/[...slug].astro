@@ -6,7 +6,6 @@ import { getLangFromUrl, useTranslations } from "@i18n/utils";
 import PageLayout from "@layouts/PageLayout.astro";
 import { readingTime } from "@lib/utils";
 import { type CollectionEntry, getCollection } from "astro:content";
-import { undefined } from "astro:schema";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog") as CollectionEntry<"blog">[]);
