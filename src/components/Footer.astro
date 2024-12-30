@@ -1,0 +1,50 @@
+---
+import BackToTop from "@components/BackToTop.astro";
+import Container from "@components/Container.astro";
+import { SITE } from "@consts";
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="animate">
+  <Container>
+    <div class="relative">
+      <div class="absolute right-0 -top-20">
+        <BackToTop />
+      </div>
+    </div>
+    <div class="flex justify-between items-center">
+      <div>
+        &copy; 2024 {`|`} {SITE.NAME}
+      </div>
+
+      <div class="flex flex-wrap gap-1 items-center">
+        <a aria-label='GitHub' href='https://github.com/KeSuave'>
+          <Icon name="mdi:github" size={24} />
+        </a>
+        <a aria-label='Twitch' href='https://www.twitch.tv/KeSuave79'>
+          <Icon name="mdi:twitch" size={24} />
+        </a>
+        <a aria-label='YouTube' href='https://www.youtube.com/@kesuave'>
+          <Icon name="mdi:youtube" size={24} />
+        </a>
+      </div>
+
+      <div class="flex flex-wrap gap-1 items-center">
+        <button
+          id='language-button'
+          aria-label='Toggle language'
+          class='group size-8 flex items-center justify-center rounded-full'
+        >
+          <Icon name="mdi:spoken-language" size={24} />
+        </button>
+        <button
+          id="theme-button"
+          aria-label="Toggle theme"
+          class="group size-8 flex items-center justify-center rounded-full"
+        >
+          <Icon name="mdi:theme-light-dark" size={24} />
+        </button>
+      </div>
+    </div>
+  </Container>
+</footer>
