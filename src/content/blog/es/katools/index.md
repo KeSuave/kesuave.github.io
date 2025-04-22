@@ -43,13 +43,14 @@ Esto generara los siguientes archivos:
 - `src/scenes/menu.ts` - Contiene una escena de menú simple para empezar rápidamente.
 - `src/scenes/game.ts` - Contiene la lógica principal de juego de tu juego.
 - `src/scenes/gameOver.ts` - Contiene la pantalla de game over.
+- `src/plugins/index.ts` - Contiene el gestor de plugins para tu juego.
 
 Despues de eso, puedes agregar las siguientes lineas a tu archivo de entrada, en el caso de create-kaplay sería `src/main.ts`:
 
 ```ts
-import { k } from "./context"
+import { k } from "./context";
 
-k.go("boot")
+k.go("boot");
 ```
 
 y listo, tienes la configuración básica para un juego de Kaplay!
@@ -59,6 +60,7 @@ Katools también proporciona algunos comandos para ayudarte a agregar escenas, c
 - `npx katools scene <name>` - Crea una nueva escena con el nombre dado.
 - `npx katools component <name>` - Crea un nuevo componente con el nombre dado.
 - `npx katools entity <name>` - Crea una nueva entidad con el nombre dado.
+- `npx katools plugin <name>` - Crea un nuevo plugin con el nombre dado.
 
 la estructura de tu proyecto debería verse algo así:
 
@@ -69,6 +71,9 @@ src/
 │   └── ...
 ├── entities/
 │   ├── player.ts
+│   └── ...
+├── plugins/
+│   ├── score.ts
 │   └── ...
 ├── scenes/
 │   ├── boot.ts
